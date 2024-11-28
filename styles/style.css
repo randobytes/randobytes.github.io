@@ -1,0 +1,247 @@
+:root {
+    --back-color-main: #171d27;
+    --back-color-dark: #0e0e0f;
+    --back-color-panel: #393d45;
+    --color-accent: #00ddff;
+    --color-accent-dark: #0090c9;
+    --color-shadow-right: #ff00ff;
+    --color-shadow-left: #00ff00;
+    --color-title: #ffffff;
+    --color-text: #f5f5f5;
+    --color-footer: #ffffff;
+    --font-family-title: "Doto", sans-serif;
+    --font-family-text: "Doto", sans-serif;
+    /* --font-family-text: "VT323", sans-serif; */
+}
+
+html {
+    font-size: 20pt;
+    background-color: var(--back-color-dark);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* min-height: 100vw; */
+    margin: 0;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: var(--color-text);
+    font-size: 1rem;
+
+    font-family: var(--font-family-text);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    font-variation-settings: "ROND" 0;
+
+    background-color: var(--back-color-main);
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    /* z-index: -1; */
+}
+
+h1,
+h2,
+h5,
+h6 {
+    display: inline;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 10vw, 3rem);
+    word-wrap: break-word;
+    color: var(--color-title);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    letter-spacing: 3pt;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 1rem;
+    color: var(--color-accent);
+    letter-spacing: 1pt;
+}
+
+h6 {
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    letter-spacing: 3pt;
+}
+
+h1 {
+    text-shadow:
+        1pt 0 0 var(--color-shadow-right),
+        -1pt 0 0 var(--color-shadow-left);
+}
+
+h2,
+h5,
+h6 {
+    text-shadow:
+        0.5pt 0 0 var(--color-shadow-right),
+        -0.5pt 0 0 var(--color-shadow-left);
+}
+
+h1,
+h5,
+footer {
+    font-family: var(--font-family-title);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
+
+b {
+    color: var(--color-accent);
+    text-transform: uppercase;
+}
+
+.panel {
+    text-align: justify;
+    display: inline-block;
+    background-color: var(--back-color-panel);
+    padding: 1rem 1.5rem;
+    margin: 1rem 1.5rem;
+    max-width: 32rem;
+    letter-spacing: 1pt;
+}
+
+header {
+    padding-top: 1rem;
+    /* background-color: var(--back-color-main); */
+}
+
+/* main {
+    background-color: var(--back-color-main);
+} */
+
+footer {
+    font-size: 0.7rem;
+    color: var(--color-footer);
+    padding: 1.5rem 3rem;
+    background-color: var(--back-color-dark);
+}
+
+form,
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.large-footer {
+    font-size: 0.8rem;
+}
+
+form {
+    margin: 1rem 1.5rem;
+}
+
+#mc-embedded-subscribe {
+    font-family: var(--font-family-text);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0.5rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5pt;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+#mc-embedded-subscribe:hover {
+    background-color: #45a049;
+}
+
+/* Active Effect */
+#mc-embedded-subscribe:active {
+    background-color: #3e8e41;
+    transform: scale(0.97);
+}
+
+/* Disable State */
+#mc-embedded-subscribe:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+#mce-EMAIL {
+    font-family: var(--font-family-text);
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    /* width: 100%; */
+    /* max-width: 400px; */
+    border: 2pt solid var(--color-accent);
+    border-radius: 5pt;
+    background-color: var(--back-color-panel);
+    color: var(--color-text);
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#mce-EMAIL:focus {
+    border-color: var(--color-shadow-left);
+}
+
+.flex-container {
+    display: flex;
+    gap: 10pt;
+}
+
+.column {
+    flex: 1;
+}
+
+a {
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-shadow-left);
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 16pt;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12pt;
+    }
+
+    .panel {
+        margin: 1rem 0;
+    }
+}
