@@ -37,13 +37,14 @@ body {
 
 h1 {
     font-size: clamp(1.5rem, 10vw, 3rem);
+    letter-spacing: 4pt;
     margin: 0.5rem 1rem;
     word-wrap: break-word;
     color: var(--color-title);
     text-transform: uppercase;
     text-shadow:
-        1pt 0 0 var(--color-shadow-right),
-        -1pt 0 0 var(--color-shadow-left);
+        2pt 0 0 var(--color-shadow-right),
+        -2pt 0 0 var(--color-shadow-left);
 }
 
 h1 img {
@@ -61,11 +62,6 @@ h2 {
     text-shadow:
         0.5pt 0 0 var(--color-shadow-right),
         -0.5pt 0 0 var(--color-shadow-left);
-}
-
-b {
-    color: var(--color-accent);
-    text-transform: uppercase;
 }
 
 .panel {
@@ -103,7 +99,7 @@ form {
 }
 
 #mc-embedded-subscribe {
-    font-family: var(--font-family-title);
+    font-family: var(--font-family);
     font-size: 1.2rem;
     font-weight: 800;
     padding: 0.5rem 2rem;
@@ -119,7 +115,7 @@ form {
 }
 
 #mc-embedded-subscribe:hover {
-    background-color: #45a049;
+    background-color: #259c29;
 }
 
 #mc-embedded-subscribe:active {
