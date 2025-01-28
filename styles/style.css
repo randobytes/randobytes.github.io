@@ -6,8 +6,8 @@
     --color-shadow-right: #ff00ff;
     --color-shadow-left: #00ff00;
     --color-title: #ffffff;
-    --color-text: #f5f5f5;
-    --color-footer: #ffffff;
+    --color-text: #d0d0d0;
+    --color-footer: #b0b0b0;
     --font-family-title: "Doto", sans-serif;
     --font-family: "Electrolize", sans-serif;
     /* --font-family: "VT323", sans-serif; */
@@ -33,6 +33,67 @@ body {
     font-variation-settings: "ROND" 0;
 
     background-color: var(--back-color-main);
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu.scrolled {
+    background-color: var(--back-color-dark);
+}
+
+b,
+h3 {
+    color: white;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.top-menu-content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    max-width: 32rem;
+    letter-spacing: 1pt;
+}
+
+.menu-item,
+.menu-item-home {
+    display: inline-block;
+    color: var(--color-title);
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.menu-item-home {
+    font-family: var(--font-family-title);    
+    font-size: 1.2rem;
+}
+
+.menu-item:hover,
+.menu-item-home:hover {
+    color: var(--color-accent);
+}
+
+.banner {
+    width: 100%;
 }
 
 h1 {
@@ -68,14 +129,14 @@ h2 {
     text-align: justify;
     display: inline-block;
     background-color: var(--back-color-panel);
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     margin: 1rem 1.5rem;
     max-width: 32rem;
     letter-spacing: 1pt;
 }
 
 header {
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 
 footer {
@@ -83,6 +144,8 @@ footer {
     color: var(--color-footer);
     padding: 1.5rem 3rem;
     background-color: var(--back-color-dark);
+    align-items: center;
+    /* display: flex; */
 }
 
 form,
@@ -94,9 +157,9 @@ form,
     text-align: right;
 }
 
-form {
+/* form {
     margin: 1rem 1.5rem;
-}
+} */
 
 #mc-embedded-subscribe {
     font-family: var(--font-family);
@@ -138,7 +201,7 @@ form {
     max-width: 90%;
     border: 2pt solid var(--color-accent);
     border-radius: 5pt;
-    background-color: var(--back-color-panel);
+    background-color: var(--back-color-main);
     color: var(--color-text);
     outline: none;
     box-shadow: none;
