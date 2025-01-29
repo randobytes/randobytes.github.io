@@ -1,8 +1,8 @@
 :root {
     --back-color-main: #171d27;
-    --back-color-main-clear: #171d2799;
+    --back-color-main-clear: #171d2700;
     --back-color-dark: #0e0e0f;
-    --back-color-panel: #393d45;
+    --back-color-panel: #393d45ee;
     --color-accent: #00ddff;
     --color-shadow-right: #ff00ff;
     --color-shadow-left: #00ff00;
@@ -20,8 +20,6 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     margin: 0;
 
     color: var(--color-text);
@@ -36,8 +34,12 @@ body {
     background-color: var(--back-color-main);
 }
 
-body.clear {
-    background-color: var(--back-color-main-clear);
+body.galaxyz {
+    background-image: url("../images/ace_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
 }
 
 .background {
@@ -109,17 +111,13 @@ li {
 }
 
 .menu-item-home {
-    font-family: var(--font-family-title);    
+    font-family: var(--font-family-title);
     font-size: 1.2rem;
 }
 
 .menu-item:hover,
 .menu-item-home:hover {
     color: var(--color-accent);
-}
-
-.banner {
-    padding: 2rem;
 }
 
 h1 {
@@ -134,8 +132,13 @@ h1 {
         -2pt 0 0 var(--color-shadow-left);
 }
 
-h1 img {
-    max-width: 90%;
+.title-long {
+    width: 90%;
+}
+
+.title-short {
+    width: 50%;
+    max-width: 20rem;
 }
 
 h2 {
@@ -146,6 +149,7 @@ h2 {
     color: var(--color-accent);
     letter-spacing: 3pt;
     text-transform: uppercase;
+    text-align: center;
     text-shadow:
         0.5pt 0 0 var(--color-shadow-right),
         -0.5pt 0 0 var(--color-shadow-left);
@@ -153,16 +157,22 @@ h2 {
 
 .panel {
     text-align: justify;
-    display: inline-block;
+    display: block;
     background-color: var(--back-color-panel);
     padding: 0.5rem 1.5rem;
-    margin: 1rem 1.5rem;
-    max-width: 32rem;
+    margin: 1rem 0;
     letter-spacing: 1pt;
 }
 
 header {
     padding-top: 3rem;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 32rem;
+    margin: 0 auto;
 }
 
 footer {
@@ -172,6 +182,23 @@ footer {
     background-color: var(--back-color-dark);
     align-items: center;
     /* display: flex; */
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 62.5%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 form,
@@ -266,9 +293,5 @@ a:hover {
 @media (max-width: 480px) {
     html {
         font-size: 12pt;
-    }
-
-    .panel {
-        margin: 1rem 0;
     }
 }
