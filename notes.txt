@@ -1,21 +1,3 @@
-
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* height: 100%; */
-    object-fit: cover;
-    /* z-index: -1; */
-}
-
-    <video class="video-background" autoplay loop muted>
-        <source src="videos/galaxyz720.mp4" type="video/mp4">
-    </video>
-
-
-
-
 <div id="mc_embed_shell">
             <div id="mc_embed_signup">
                 <form
