@@ -13,6 +13,7 @@
         <input type="email" id="email" name="email" placeholder="you@email.com" required />
         <button type="submit">Subscribe</button>
         <div id="status" aria-live="polite"></div>
+        <div id="log" aria-live="polite"></div>
     </form>
 
     <script>
@@ -29,6 +30,10 @@
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
 
+            log.textContent = log.textContent + '<br />name = ' + name;
+            log.textContent = log.textContent + '<br />email = ' + email;
+            log.textContent = log.textContent + '<br />url = ' + window.location.href;
+
             if (!email) {
                 status.textContent = 'Please provide an email.';
                 return;
@@ -36,6 +41,8 @@
 
             try {
                 const token = await grecaptcha.execute(SITE_KEY, { action: 'subscribe' });
+
+                log.textContent = log.textContent + '<br />token = ' + token;
 
                 const res = await fetch(EDGE_FN_URL, {
                     method: 'POST',
