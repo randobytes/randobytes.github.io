@@ -18,7 +18,6 @@
 
     <script>
         const SITE_KEY = '6Le16ccrAAAAAHt00Pti9Gux0vsaSguIliYZ7zXs';
-        // const EDGE_FN_URL = 'https://appkznwsowbybsengcir.supabase.co/functions/v1/subscribe';
         const EDGE_FN_URL = 'https://appkznwsowbybsengcir.functions.supabase.co/subscribe';
 
         const form = document.getElementById('subscribe-form');
@@ -31,10 +30,6 @@
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
 
-            log.textContent = log.textContent + ' | name = ' + name;
-            log.textContent = log.textContent + ' | email = ' + email;
-            log.textContent = log.textContent + ' | url = ' + window.location.href;
-
             if (!email) {
                 status.textContent = 'Please provide an email.';
                 return;
@@ -42,8 +37,6 @@
 
             try {
                 const token = await grecaptcha.execute(SITE_KEY, { action: 'subscribe' });
-
-                log.textContent = log.textContent + ' | token = ' + token;
 
                 const res = await fetch(EDGE_FN_URL, {
                     method: 'POST',
@@ -69,9 +62,6 @@
                 status.textContent = 'An error occurred. Please try again.';
             }
         });
-
-        // pre-load token for better UX
-        // grecaptcha.ready(() => { grecaptcha.execute(SITE_KEY, { action: 'subscribe' }); });
     </script>
 </body>
 
