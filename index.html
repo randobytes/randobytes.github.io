@@ -18,38 +18,21 @@
     <title>Randobytes - Video games with soul and pixels</title>
     <meta name="description"
         content="Randobytes is all about making games that feel personal and alive. We love to create fun and immersive experiences that resonate with players of all ages.">
+
 </head>
 
 <body class="video">
     <video class="video-background" autoplay loop muted>
-        <source src="images/bg.mp4" type="video/mp4">
+        <source src="images/bg_main.mp4" type="video/mp4">
     </video>
 
-    <div class="top-menu" id="topMenu">
-        <div class="top-menu-content">
-            <div class="column">
-                <a href="index.html" class="menu-item-home"><img
-                        src="favicon32.png" /><span>RANDOBYTES</span></a>
-            </div>
-            <div class="column, right">
-                <a href="about.html" class="menu-item">About&nbsp;</a>
-            </div>
-            <div class="column, right, dropdown">
-                <a href="javascript:void(0)" class="dropdown-title">Games</a>
-                <div class="dropdown-content">
-                    <a href="galaxyz/index.html" class="menu-item"><img
-                            src="galaxyz/images/icon.png" /><span>Galaxyz</span></a>
-                    <a href="wonder_surprise/index.html" class="menu-item"><img
-                            src="wonder_surprise/images/icon.png" /><span>Wonder Surprise</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="top-menu" id="top-menu"></div>
+    <script src="scripts/menu_main.js"></script>
 
     <header>
         <div class="center">
             <h1>
-                <img class="title-short" src="images/rnd_logo_1.png" alt="Randobytes">
+                <img class="title-long" src="images/rnbytes_2.png" alt="Randobytes">
             </h1>
         </div>
     </header>
@@ -61,12 +44,10 @@
 
                 <h2>Video games with soul and pixels</h2>
 
-                <p><b>Randobytes</b> is all about making games that feel personal and alive. We love to create
-                    fun and
-                    immersive experiences that resonate with players of all ages.</p>
-                <p>Currently, we're excited to be working on our new game <a
-                        href="galaxyz/index.html">Galaxyz</a> -
-                    pixel-charged top-down space shooter which will be available soon on PC and MacOS.
+                <p><a href="about.html">Randobytes</a> is all about making games that feel personal and alive. We love
+                    to create fun and immersive experiences that resonate with players of all ages.</p>
+                <p>Currently, we're excited to be working on our destruction-focused space shooter <a
+                        href="galaxyz/index.html">Galaxyz</a> which will be available soon on PC and MacOS.
                 </p>
 
             </div>
@@ -108,12 +89,8 @@
 
     </main>
 
-    <footer>
-        <p class="center">Feel free to contact: <a href="mailto:hello@randobytes.dev">hello@randobytes.dev</a></p>
-        <p class="center">&copy; 2025 Randobytes</p>
-    </footer>
-
-    <script src="scripts/menu.js"></script>
+    <footer id="footer"></footer>
+    <script src="scripts/footer.js"></script>
 
 </body>
 

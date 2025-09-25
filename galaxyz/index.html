@@ -22,31 +22,13 @@
 
 <body class="galaxyz">
 
-    <div class="top-menu" id="topMenu">
-        <div class="top-menu-content">
-            <div class="column">
-                <a href="../index.html" class="menu-item-home"><img
-                        src="../favicon32.png" /><span>RANDOBYTES</span></a>
-            </div>
-            <div class="column, right">
-                <a href="../about.html" class="menu-item">About&nbsp;</a>
-            </div>
-            <div class="column, right, dropdown">
-                <a href="javascript:void(0)" class="dropdown-title">Games</a>
-                <div class="dropdown-content">
-                    <a href="../galaxyz/index.html" class="menu-item"><img
-                            src="../galaxyz/images/icon.png" /><span>Galaxyz</span></a>
-                    <a href="../wonder_surprise/index.html" class="menu-item"><img
-                            src="../wonder_surprise/images/icon.png" /><span>Wonder Surprise</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="top-menu" id="top-menu"></div>
+    <script src="../scripts/menu.js"></script>
+
 
     <header>
         <div class="center">
             <h1><img class="title-long" src="images/title.png" alt="Galaxyz"></h1>
-            <!-- <h1><img class="title-long" src="images/galaxyz_title.gif" alt="Galaxyz"></h1> -->
         </div>
     </header>
 
@@ -82,12 +64,16 @@
             <div class="panel">
                 <h3>Galaxyz key features</h3>
                 <ul>
-                    <li><b>High octane retro</b> - large pixel art graphics boosted with light effects and animations!</li>
+                    <li><b>High octane retro</b> - large pixel art graphics boosted with light effects and animations!
+                    </li>
                     <li><b>Smash into pixels</b> - explode whatever you want into a shower of dazzling pixels!</li>
                     <li><b>Craft your ship</b> - combine parts to assemble your personal battle rig!</li>
-                    <li><b>Choose your side</b> - join treasure hunters, galactic police, pirates... or crash 'em all!</li>
-                    <li><b>Bass at full volume</b> - feel the power of jet engines drifting to the phonk soundtrack!</li>
-                    <li><b>Game never over</b> - reintegrate in the same spot upon destruction to take revenge on the enemy!</li>
+                    <li><b>Choose your side</b> - join treasure hunters, galactic police, pirates... or crash 'em all!
+                    </li>
+                    <li><b>Bass at full volume</b> - feel the power of jet engines drifting to the phonk soundtrack!
+                    </li>
+                    <li><b>Game never over</b> - reintegrate in the same spot upon destruction to take revenge on the
+                        enemy!</li>
                 </ul>
             </div>
 
@@ -128,12 +114,10 @@
 
     </main>
 
-    <footer>
-        <p class="center">Feel free to contact: <a href="mailto:hello@randobytes.dev">hello@randobytes.dev</a></p>
-        <p class="center">&copy; 2025 Randobytes</p>
-    </footer>
 
-    <script src="../scripts/menu.js"></script>
+    <footer id="footer"></footer>
+    <script src="../scripts/footer.js"></script>
+
 </body>
 
 </html>
