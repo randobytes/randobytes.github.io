@@ -37,12 +37,12 @@ form.addEventListener('submit', async (e) => {
         if (res.ok) {
             name.value = "";
             email.value = "";
-            state.textContent = json.message || 'Subscribed successfully. Thank you!';
+            state.textContent = json.message || 'Subscribed successfully. Thank you! 🤗';
         } else {
-            state.textContent = json.error || 'Subscription failed.';
+            state.textContent = json.error || 'Oops, something went wrong 🙃';
         }
     } catch (err) {
         console.error(err);
-        state.textContent = 'An error occurred. Please try again.';
+        state.textContent = 'Oops, something went wrong 🙃';
     }
 });
