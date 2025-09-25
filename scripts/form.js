@@ -32,17 +32,14 @@ form.addEventListener('submit', async (e) => {
             })
         });
 
-        const json = await res.json();
-
         if (res.ok) {
-            name.value = "";
-            email.value = "";
-            state.textContent = json.message || 'Subscribed successfully. Thank you! 🤗';
+            document.getElementById('subscribe-name').value = '';
+            document.getElementById('subscribe-email').value = '';
+            state.textContent = 'Subscribed successfully. Thank you! 🤗';
         } else {
-            state.textContent = json.error || 'Oops, something went wrong 🙃';
+            state.textContent = 'Oops, something went wrong 🙃';
         }
     } catch (err) {
-        console.error(err);
         state.textContent = 'Oops, something went wrong 🙃';
     }
 });
