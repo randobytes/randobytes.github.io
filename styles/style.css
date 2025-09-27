@@ -7,6 +7,7 @@
     --back-color-dropdown: #393d45;
     --back-color-dropdown-dark: #0e0e0f;
     --color-accent: #00ddff;
+    --color-link: #ffffff;
     --color-shadow-right: #ff00ff;
     --color-shadow-left: #00ff00;
     --color-title: #ffffff;
@@ -178,6 +179,13 @@ li {
     background-color: var(--back-color-dropdown-dark);
 }
 
+.message {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     font-size: clamp(1.5rem, 10vw, 3rem);
     letter-spacing: 4pt;
@@ -222,6 +230,16 @@ h2 {
     letter-spacing: 1pt;
 }
 
+.message .panel {
+    max-width: 20rem;
+}
+
+.small {
+    text-align: center;
+    font-size: 0.6rem;
+    color: var(--color-footer);
+}
+
 .panel img {
     max-width: 80%;
 }
@@ -240,6 +258,7 @@ header {
 }
 
 main {
+    min-height: 75vh;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -277,7 +296,8 @@ form,
     text-align: right;
 }
 
-#subscribe-email, #subscribe-name {
+#subscribe-email,
+#subscribe-name {
     font-family: var(--font-family);
     font-size: 1rem;
     font-weight: 800;
@@ -294,7 +314,8 @@ form,
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-#subscribe-email:focus, #subscribe-name:focus {
+#subscribe-email:focus,
+#subscribe-name:focus {
     border-color: var(--color-shadow-left);
 }
 
@@ -350,7 +371,15 @@ a {
 }
 
 a:hover {
-    color: var(--color-shadow-left);
+    color: var(--color-link);
+}
+
+footer a {
+    color: var(--color-link);
+}
+
+footer a:hover {
+    color: var(--color-accent);
 }
 
 @media (max-width: 720px) {
