@@ -40,7 +40,7 @@ body {
 }
 
 body.galaxyz {
-    background-image: url("../galaxyz/images/bg.png");
+    background-image: url("../galaxyz/images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
