@@ -10,14 +10,19 @@ form.addEventListener('submit', async (e) => {
 
     const state = document.getElementById('subscribe-state');
     const button = document.getElementById('subscribe-button');
+    const tfName = document.getElementById('subscribe-name');
+    const tfEmail = document.getElementById('subscribe-email');
+
     button.disabled = true;
+    tfName.disabled = true;
+    tfEmail.disabled = true;
     state.textContent = 'Please wait...';
 
-    const name = document.getElementById('subscribe-name').value.trim();
-    const email = document.getElementById('subscribe-email').value.trim();
+    const name = tfName.value.trim();
+    const email = tfEmail.value.trim();
 
     if (!email) {
-        state.textContent = 'Please provide an email.';
+        state.textContent = 'Please enter your email.';
         return;
     }
 
@@ -42,8 +47,8 @@ form.addEventListener('submit', async (e) => {
         });
 
         if (res.ok) {
-            document.getElementById('subscribe-name').value = '';
-            document.getElementById('subscribe-email').value = '';
+            tfName.value = '';
+            tfEmail.value = '';
             state.textContent = OK_MESSAGE;
         } else {
             state.textContent = ERROR_MESSAGE;
@@ -52,5 +57,7 @@ form.addEventListener('submit', async (e) => {
         state.textContent = ERROR_MESSAGE;
     } finally {
         button.disabled = false;
+        tfName.disabled = false;
+        tfEmail.disabled = false;
     }
 });
