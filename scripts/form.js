@@ -3,7 +3,7 @@ const form = document.getElementById('subscribe-form');
 form.innerHTML = '<div><input type="text" id="subscribe-name" name="name" placeholder="Your name" /></div>' +
     '<div><input type="email" id="subscribe-email" name="email" placeholder="you@email.com" required /></div>' +
     '<div><button type="submit" id="subscribe-button">Subscribe</button></div>' +
-    '<div id="subscribe-state" class="small" aria-live="polite">No spam, just the good stuff.</div>'
+    '<div id="subscribe-state" class="small" aria-live="polite">No spam, just the good stuff. Unsubscribe at any time.</div>'
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
