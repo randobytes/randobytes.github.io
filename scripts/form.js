@@ -9,6 +9,8 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const state = document.getElementById('subscribe-state');
+    const button = document.getElementById('subscribe-button');
+    button.disabled = true;
     state.textContent = 'Please wait...';
 
     const name = document.getElementById('subscribe-name').value.trim();
@@ -48,5 +50,7 @@ form.addEventListener('submit', async (e) => {
         }
     } catch (err) {
         state.textContent = ERROR_MESSAGE;
+    } finally {
+        button.disabled = false;
     }
 });

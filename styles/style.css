@@ -346,9 +346,10 @@ form,
 }
 
 #subscribe-button:disabled {
-    background-color: #ccc;
-    color: #777;
+    background-color: #566d57;
+    color: #bebebe;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 #subscribe-state {
