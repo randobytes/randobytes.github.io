@@ -1,6 +1,6 @@
 const form = document.getElementById('subscribe-form');
 
-form.innerHTML = '<p class="center">Subscribe to Randobytes newsletter to stay updated and be among the first players!</p>' +
+form.innerHTML = '<h2>Subscribe</h2><p>Subscribe to Randobytes newsletter to stay updated and be among the first players!</p>' +
     '<div><input type="text" id="subscribe-name" name="name" placeholder="Your name" /></div>' +
     '<div><input type="email" id="subscribe-email" name="email" placeholder="you@email.com" required /></div>' +
     '<div><button type="submit" id="subscribe-button">Subscribe</button></div>' +
@@ -47,7 +47,7 @@ form.addEventListener('submit', async (e) => {
         });
 
         if (res.ok) {
-            form.innerHTML = '<p>You have successfully subscribed to Randobytes newsletter.</p>';
+            form.innerHTML = '<h2>Thank you!</h2><p>You have successfully subscribed to Randobytes newsletter.</p>';
             return;
         }
     } catch (err) { }
