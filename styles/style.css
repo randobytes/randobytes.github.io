@@ -37,18 +37,7 @@ body {
     font-variation-settings: "ROND" 0;
 
     background-color: var(--back-color-main);
-}
 
-body.galaxyz {
-    background-image: url("../galaxyz/images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
-}
-
-body.wonder_surprise {
-    background-image: url("../wonder_surprise/images/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -181,6 +170,13 @@ li {
 
 .message {
     min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squeeze {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,6 +365,11 @@ a {
     color: var(--color-accent);
     transition: color 0.3s ease;
     text-decoration: none;
+}
+
+a[target="_blank"]:after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyElEQVR4AaxSSxKDIBSTngp3eLLiyWQHt6KJAuVXaKc6ZNCYxLzBx/LndV+AtVY753wNFgR3AMU78kRqIIR4eu93YMtBEZ5PHvcGKFYKCKxZ17UAeXLYVUARUgdA0y6OlzXcc8U0IDejiQ7m1GIY0DMjxEgptxC0fAzomWkCr3givCe6ARDpODO+GGtT36AbAJXh0c3M0PVHgJFHOfwyzUTdQKH+EDDxf8B2rRTAypwbOCY4/9jLvrxHQG0tpRTfgNomIBK/7i8AAAD///OJk04AAAAGSURBVAMAcECtIfoHlMgAAAAASUVORK5CYII=);
+    margin: 0 3px 0 5px;
 }
 
 a:hover {
