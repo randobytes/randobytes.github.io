@@ -245,8 +245,22 @@ h2 {
     letter-spacing: 1pt;
 }
 
+.banner {
+    display: block;
+    margin: 1rem 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
 .message .panel {
     max-width: 20rem;
+}
+
+.details {
+    font-size: 0.85rem;
+    color: var(--color-footer);
 }
 
 .small {
@@ -339,33 +353,37 @@ form,
     border-color: var(--color-shadow-left);
 }
 
-#subscribe-button {
+a.cta {
+    display: inline-block;
+}
+
+.cta {
     font-family: var(--font-family);
     font-size: 1.2rem;
     font-weight: 800;
-    padding: 0.5rem 2rem;
     margin: 0.5rem;
+    padding: 0.5rem 2rem;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5pt;
     cursor: pointer;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 1pt;
     box-shadow: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#subscribe-button:hover {
+.cta:hover {
     background-color: #259c29;
 }
 
-#subscribe-button:active {
+.cta:active {
     background-color: #3e8e41;
     transform: scale(0.97);
 }
 
-#subscribe-button:disabled {
+.cta:disabled {
     background-color: #566d57;
     color: #bebebe;
     cursor: not-allowed;
