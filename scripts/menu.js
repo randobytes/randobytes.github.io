@@ -3,7 +3,7 @@ const topMenu = document.getElementById('top-menu');
 topMenu.innerHTML =
     '<div class="top-menu-content">' +
 
-    '<a href="../index.html" class="menu-item-home"><img src="../favicon32.png" /><span>RANDOBYTES</span></a>' +
+    '<a href="../index.html" class="menu-item-home"><img src="../images/top_logo.png" alt="Randobytes"/></a>' +
 
     '<span class="column"></span>' +
 
