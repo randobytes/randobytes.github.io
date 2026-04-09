@@ -2,17 +2,20 @@
     --back-color-main: #171d27;
     --back-color-main-clear: #171d2700;
     --back-color-dark: #0e0e0f;
-    --back-color-dark-transparent: #0e0e0f50;
-    --back-color-panel: #1f232aee;
+    --back-color-footer: #0e0e0fa0;
+    --back-color-top-menu: #0e0e0f50;
+    --back-color-top-menu-scrolled: #0e0e0fa0;
+    --back-color-panel: #1f232aa0;
+    /* --back-color-panel: #0e0e0fa0; */
     --back-color-dropdown: #393d45;
     --back-color-dropdown-dark: #0e0e0f;
     --color-accent: #00ddff;
-    --color-link: #ffffff;
+    --color-link: #ba75ff;
     --color-shadow-right: #ff00ff;
     --color-shadow-left: #00ff00;
     --color-title: #ffffff;
-    --color-text: #d0d0d0;
-    --color-footer: #b0b0b0;
+    --color-text: #e1e1e1;
+    --color-footer: #c1c1c1;
     --font-family-title: "Doto", sans-serif;
     --font-family: "Electrolize", sans-serif;
     --max-width: 36rem;
@@ -68,15 +71,22 @@ body.video {
     left: 0;
     width: 100%;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
     z-index: 1000;
     display: flex;
     justify-content: center;
-    background-color: var(--back-color-dark-transparent);
+    background-color: var(--back-color-top-menu);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .top-menu.scrolled {
-    background-color: var(--back-color-dark);
+    background-color: var(--back-color-top-menu-scrolled);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 b,
@@ -238,10 +248,17 @@ h2 {
 .panel {
     text-align: justify;
     display: block;
-    background-color: var(--back-color-panel);
+    /* background-color: var(--back-color-panel); */
     padding: 0.5rem 1.5rem;
     margin: 1rem 0;
     letter-spacing: 1pt;
+
+    border-radius: 24px;
+    background: var(--back-color-panel);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .banner {
@@ -251,6 +268,10 @@ h2 {
 
 .banner img {
     width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .message .panel {
@@ -276,7 +297,9 @@ h2 {
     float: left;
     width: 30%;
     margin: 0.5rem 1rem 0.5rem 0;
-    /* border-radius: 50%; */
+
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header {
@@ -300,14 +323,22 @@ footer {
     font-size: 0.7rem;
     color: var(--color-footer);
     padding: 2rem;
-    background-color: var(--back-color-dark);
+    background-color: var(--back-color-footer);
     align-items: center;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .iframe-container {
     position: relative;
     overflow: hidden;
     padding-top: 62.5%;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .responsive-iframe {
@@ -354,6 +385,11 @@ form,
 
 a.cta {
     display: inline-block;
+    color: var(--color-title);
+}
+
+a.cta:hover {
+    color: var(--color-title);
 }
 
 .cta {
@@ -362,7 +398,7 @@ a.cta {
     font-weight: 800;
     margin: 0.5rem;
     padding: 0.5rem 2rem;
-    background-color: #4CAF50;
+    background-color: #37ab3b;
     color: white;
     border: none;
     border-radius: 5pt;
@@ -374,11 +410,11 @@ a.cta {
 }
 
 .cta:hover {
-    background-color: #259c29;
+    background-color: #208624;
 }
 
 .cta:active {
-    background-color: #3e8e41;
+    background-color: #1e7321;
     transform: scale(0.97);
 }
 
@@ -436,7 +472,7 @@ a:hover {
 }
 
 footer a {
-    color: var(--color-link);
+    color: var(--color-title);
 }
 
 footer a:hover {
@@ -456,6 +492,14 @@ footer a:hover {
 
     .video-background {
         display: none;
+    }
+}
+
+@media (max-width: 865px) {
+    .panel, .banner img, .iframe-container {
+        border-radius: 0;
+        border-left-width: 0;
+        border-right-width: 0;
     }
 }
 
